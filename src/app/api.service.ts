@@ -12,12 +12,13 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   public signUp(data) {
-   
+
     var headers = {
       'Authorization': "token",
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     }
+
     return this.httpClient.post(this.baseURL + "endPOint", data, { headers: headers });
   }
 }
