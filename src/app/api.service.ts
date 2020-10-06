@@ -18,7 +18,6 @@ export class ApiService {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     }
-
     return this.httpClient.post(this.baseURL + "endPOint", data, { headers: headers });
   }
 }
