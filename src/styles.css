@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+.img-responsive{
+    display: block; 
+     max-width: 100%; 
+      height: auto;
+}
+@font-face {
+    font-family: bold;
+    src: url("/AccessRegistration/assets/fonts/SF-Compact-Display-Bold.otf") format("truetype");
+}
+@font-face {
+    font-family: regular;
+    src: url("/AccessRegistration/assets/fonts/SF-Compact-Display-Regular.otf") format("truetype");
+}
+.boldFamily {font-family: bold; }
+.regularFamily {font-family: regular;}
+.headColor{
+    color: #ff4e4e;
+}
+.subHeadColor{
+    color: #26229d;
+}
+.textGrey{
+    color: gray;
+}
+.labelColor{
+    color: gray;
+font-weight: 640;
+}
+.readOnlyStyle{
+    background-color: gray !important;
+opacity: 1 !important;
+color: white !important;
+}

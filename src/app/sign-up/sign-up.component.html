@@ -1,0 +1,56 @@
+<div class="mt-5">
+    <div class="text-center"> <span class="regularFamily headColor">Q</span></div>
+    <div class="text-center textGrey">
+        Please Confirm or edit your contact information, so that we can <br> notify you when you are approved for our
+        BETA.
+    </div>
+
+    <form role="form" [formGroup]="signUpForm" #signform="ngForm" (ngSubmit)="signUpUser()">
+        <div class="container container-sm">
+            <hr>
+            <div class="center-block">
+                <div>
+                    <div>
+                        <label class="label-control"> <small class="labelColor text-uppercase">Name</small></label>
+                        <div class="form-group has-feedback">
+                            <input readonly type="text" formControlName="name" placeholder="Type a name"
+                                autocomplete="off" required="" class="form-control readOnlyStyle" />
+
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-control"> <small class="labelColor text-uppercase">Email
+                                address</small></label>
+                        <div class="form-group has-feedback">
+                            <input readonly type="text" formControlName="email" placeholder="Type a email"
+                                autocomplete="off" required="" class="form-control readOnlyStyle" />
+
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-control"> <small class="labelColor">PHONE NUMBER</small></label>
+                        <div class="form-group has-feedback">
+                            <input id="resetInputEmail1" type="number" formControlName="phone"
+                                placeholder="Type a phone number" autocomplete="off" required="" class="form-control" />
+
+                        </div>
+                        <small *ngIf="f.phone.invalid && signform.submitted" style="color: maroon;">
+                            <span *ngIf="f.phone.errors.required">
+                                Please enter phone.
+                            </span>
+                            <span *ngIf="f.phone.errors.min || f.phone.errors.max">
+                                Please enter valid phone! Eg. ( 9769905207 )
+                            </span>
+                        </small>
+                    </div>
+                    <hr class="mt-5">
+                    <div class=" text-center">
+                        <button [disabled]="loadershow" type="submit"
+                            class="col-sm-4 btn mt btn-outline-danger btn-sm text-uppercase"> SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
